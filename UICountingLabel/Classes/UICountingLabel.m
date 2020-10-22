@@ -1,6 +1,10 @@
 #import <QuartzCore/QuartzCore.h>
 
+#if SWIFT_PACKAGE
 #import "UICountingLabel.h"
+#else
+#import <UICountingLabel/UICountingLabel.h>
+#endif
 
 #if !__has_feature(objc_arc)
 #error UICountingLabel is ARC only. Either turn on ARC for the project or use -fobjc-arc flag
